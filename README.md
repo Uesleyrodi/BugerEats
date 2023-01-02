@@ -13,8 +13,8 @@
 
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
- <a href="#feature">Features</a> • 
- <a href="#requisitos">Pré-requisitos</a> • 
+ <a href="#features">Features</a> • 
+ <a href="#pré-requisitos">Pré-requisitos</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#autor">Autor</a>
 </p>
@@ -23,7 +23,7 @@
 	🚧  Automação Buger Eats 🚀 Em construção...  🚧
 </h5>
 
-<h2 href="#feature">Features</h2>
+<h2 href="#features">Features</h2>
 
 - [x] Validar Home
 - [x] Retornar Home
@@ -34,7 +34,7 @@
 - [x] Buscar Cep
 - [x] Cadastro com Sucesso
 
-<h2 href="#requisitos">Pré-requisitos</h2>
+<h2 href="#pré-requisitos">Pré-requisitos</h2>
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Appium](https://appium.io/).
@@ -56,7 +56,7 @@ $ dotnet build
 $ dotnet test
 ```
 
-<h2 href="#tecnologias">🛠 Tecnologias</h2>
+<h2 href="#-tecnologias">🛠 Tecnologias</h2>
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
