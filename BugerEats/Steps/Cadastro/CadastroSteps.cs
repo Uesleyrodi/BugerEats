@@ -8,6 +8,8 @@ namespace BugerEats.Steps.Cadastro
 {
     public class CadastroSteps : Hooks
     {
+        #region Click em Elementos na tela de Cadastro
+
         public static void ClickConfirmarCadastro()
         {
             Driver.FindElement(CadastroPage.FinalizaCadastro).Click();
@@ -27,6 +29,10 @@ namespace BugerEats.Steps.Cadastro
         {
             Driver.FindElement(CadastroPage.FinalizaCadastro).Click();
         }
+
+        #endregion
+
+        #region Validações
 
         public static void CheckCamposObrigatorios()
         {
@@ -67,6 +73,8 @@ namespace BugerEats.Steps.Cadastro
         {
             Assert.IsTrue(Driver.FindElement(CadastroPage.WhatsAppInvalido).Displayed);
         }
+
+        #endregion
 
         #region Preencher Formulário
         public static void SetPreencherCep(string cep)
