@@ -1,4 +1,7 @@
-﻿using BugerEats.PageObjects.Cadastro;
+﻿using Bogus;
+using Bogus.Extensions.Brazil;
+using BugerEats.Deploy;
+using BugerEats.PageObjects.Cadastro;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.IO;
@@ -22,12 +25,7 @@ namespace BugerEats.Steps.Cadastro
             Driver.FindElement(CadastroPage.BtnRetornaHome).Click();
         }
 
-        public static void SetPreencherCep(string cep)
-        {
-            Driver.FindElement(CadastroPage.Cep).SendKeys(cep.ToString());
-        }
-
-        public static void FinalizaCadastroEntrega()
+        public static void ClickFinalizaCadastroEntrega()
         {
             Driver.FindElement(CadastroPage.FinalizaCadastro).Click();
         }
@@ -73,13 +71,35 @@ namespace BugerEats.Steps.Cadastro
         }
 
         #region Preencher Formulário
-
-        public static void PreencheDados(string nome, string cpf, string email, string whatsapp)
+        public static void SetPreencherCep(string cep)
         {
-            Driver.FindElement(CadastroPage.NomeCompleto).SendKeys(nome);
-            Driver.FindElement(CadastroPage.Cpf).SendKeys(cpf);
-            Driver.FindElement(CadastroPage.Email).SendKeys(email);
-            Driver.FindElement(CadastroPage.WhatsApp).SendKeys(whatsapp);
+            Driver.FindElement(CadastroPage.Cep).SendKeys(cep.ToString());
+        }
+
+        public static void SetPreecherCpf()
+        {
+            var pessoa = FakeDadosPessoa.ListaPessoasFake();
+
+            foreach (var pes in pessoa)
+            {
+                Driver.FindElement(CadastroPage.Cpf).SendKeys(pes.Cpf);
+                Console.WriteLine(pes.Cpf);
+            }
+        }
+
+        public static void PreencheDados()
+        {
+            var pessoa = FakeDadosPessoa.ListaPessoasFake();
+
+            foreach (var pes in pessoa)
+            {
+                var CpfTratado = string.Join("", pes.Cpf.Split('.', '-'));
+
+                Driver.FindElement(CadastroPage.NomeCompleto).SendKeys(pes.Nome);
+                Driver.FindElement(CadastroPage.Cpf).SendKeys(CpfTratado);
+                Driver.FindElement(CadastroPage.Email).SendKeys(pes.Email);
+                Driver.FindElement(CadastroPage.WhatsApp).SendKeys(pes.WhatsApp);
+            }
         }
 
         public static void PreencheEndereco(string cep, string numero, string complemento)

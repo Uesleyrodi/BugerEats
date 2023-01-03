@@ -35,3 +35,5 @@ C:\BugerEats\BugerEats\BugerEats\obj\Debug\BugerEats.csproj.CoreCompileInputs.ca
 C:\BugerEats\BugerEats\BugerEats\obj\Debug\BugerEats.csproj.CopyComplete
 C:\BugerEats\BugerEats\BugerEats\obj\Debug\BugerEats.dll
 C:\BugerEats\BugerEats\BugerEats\obj\Debug\BugerEats.pdb
+C:\BugerEats\BugerEats\BugerEats\bin\Debug\Bogus.dll
+C:\BugerEats\BugerEats\BugerEats\bin\Debug\Bogus.xml

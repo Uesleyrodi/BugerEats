@@ -1,4 +1,5 @@
 ﻿using BugerEats.Steps;
+using BugerEats.Steps.Cadastro;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -15,6 +16,7 @@ namespace BugerEats.Feature.Home
             Console.WriteLine("Então: Deve ser direcionado a Home da aplicação");
 
             HomeSteps.CheckElementosHome();
+            //CadastroSteps.SetGerarDados();
         }
     }
 }

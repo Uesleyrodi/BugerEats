@@ -43,10 +43,8 @@ namespace BugerEats.Feature.Cadastro
             Console.WriteLine("Então: O sistema deverá validar os dados do usuário e exibir mensagem de erro abaixo do campo @CPF");
 
             HomeSteps.ClickCadastro();
-            CadastroSteps.PreencheDados("Guilherme Yago Renato Rezende", "1234", "guilherme_rezende@carlosalbertoleite.com.br", "(67) 98996-7866");
-            CadastroSteps.PreencheEndereco("17402374", "340", "Teste Complemento");
-            CadastroSteps.PreencheMetodoEntrega();
-            CadastroSteps.FinalizaCadastroEntrega();
+            CadastroSteps.SetPreecherCpf();
+            CadastroSteps.ClickFinalizaCadastroEntrega();
             CadastroSteps.CheckCpfInvalido();
         }
 
@@ -59,8 +57,8 @@ namespace BugerEats.Feature.Cadastro
             Console.WriteLine("Então: O sistema deve validar as informações e exibir mensagem de erro abaixo do campo @WhatsApp");
 
             HomeSteps.ClickCadastro();
-            CadastroSteps.PreencheDados("Gabrielly Elisa Natália Martins", "20742768856", "gabrielly.elisa.martins@hardquality.com.br", "123");
-            CadastroSteps.FinalizaCadastroEntrega();
+            CadastroSteps.PreencheDados();
+            CadastroSteps.ClickFinalizaCadastroEntrega();
             CadastroSteps.CheckWhatsAppInvalido();
         }
 
@@ -101,10 +99,10 @@ namespace BugerEats.Feature.Cadastro
             Console.WriteLine("E: E o sistema deve redirecionar a '/Home'");
 
             HomeSteps.ClickCadastro();
-            CadastroSteps.PreencheDados("Oliver Calebe da Luz", "68525783641", "oliver_daluz@grupoannaprado.com.br", "(67) 98996-7866");
+            CadastroSteps.PreencheDados();
             CadastroSteps.PreencheEndereco("17402374", "340", "Teste Complemento");
             CadastroSteps.PreencheMetodoEntrega();
-            CadastroSteps.FinalizaCadastroEntrega();
+            CadastroSteps.ClickFinalizaCadastroEntrega();
          }
     }
 }
