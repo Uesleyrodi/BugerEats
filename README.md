@@ -37,7 +37,7 @@
 <h2 href="#pré-requisitos">Pré-requisitos</h2>
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Appium](https://appium.io/).
+[Git](https://git-scm.com).
 Além disto é bom ter um editor para trabalhar com o código como [Visual Studio Community](https://visualstudio.microsoft.com/pt-br/downloads/)
 
 ### 🎲 Baixando repositório localmente
@@ -61,7 +61,6 @@ $ dotnet test
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Git](https://git-scm.com)
-- [Appium](https://appium.io/)
 - [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)
 - [CSharp](https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/)
 
