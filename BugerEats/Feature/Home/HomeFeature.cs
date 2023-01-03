@@ -1,4 +1,5 @@
 ﻿using BugerEats.Steps;
+using BugerEats.Steps.Cadastro;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 

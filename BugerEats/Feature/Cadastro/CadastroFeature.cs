@@ -43,10 +43,8 @@ namespace BugerEats.Feature.Cadastro
             Console.WriteLine("Então: O sistema deverá validar os dados do usuário e exibir mensagem de erro abaixo do campo @CPF");
 
             HomeSteps.ClickCadastro();
-            CadastroSteps.PreencheDados("Guilherme Yago Renato Rezende", "1234", "guilherme_rezende@carlosalbertoleite.com.br", "(67) 98996-7866");
-            CadastroSteps.PreencheEndereco("17402374", "340", "Teste Complemento");
-            CadastroSteps.PreencheMetodoEntrega();
-            CadastroSteps.FinalizaCadastroEntrega();
+            CadastroSteps.SetPreecherCpfInvalido();
+            CadastroSteps.ClickFinalizaCadastroEntrega();
             CadastroSteps.CheckCpfInvalido();
         }
 
@@ -59,8 +57,8 @@ namespace BugerEats.Feature.Cadastro
             Console.WriteLine("Então: O sistema deve validar as informações e exibir mensagem de erro abaixo do campo @WhatsApp");
 
             HomeSteps.ClickCadastro();
-            CadastroSteps.PreencheDados("Gabrielly Elisa Natália Martins", "20742768856", "gabrielly.elisa.martins@hardquality.com.br", "123");
-            CadastroSteps.FinalizaCadastroEntrega();
+            CadastroSteps.SetPreencheDados();
+            CadastroSteps.ClickFinalizaCadastroEntrega();
             CadastroSteps.CheckWhatsAppInvalido();
         }
 
@@ -86,9 +84,9 @@ namespace BugerEats.Feature.Cadastro
             Console.WriteLine("Então: O sistema informará ao usuário os dados da Busca, preenchendo os campos @Logradouro, @Bairro, @Cidade");
             
             HomeSteps.ClickCadastro();
-            CadastroSteps.SetPreencherCep("17402374");
+            CadastroSteps.SetPreencherCep("01001000");
             CadastroSteps.ClickBuscaCep();
-            CadastroSteps.CheckBuscaCep("Rua da Aroeira", "Jardim Paineiras", "Garça/SP");
+            CadastroSteps.CheckBuscaCep("Praça da Sé", "Sé", "São Paulo/SP");
         }
 
         [TestMethod]
@@ -101,10 +99,10 @@ namespace BugerEats.Feature.Cadastro
             Console.WriteLine("E: E o sistema deve redirecionar a '/Home'");
 
             HomeSteps.ClickCadastro();
-            CadastroSteps.PreencheDados("Oliver Calebe da Luz", "68525783641", "oliver_daluz@grupoannaprado.com.br", "(67) 98996-7866");
-            CadastroSteps.PreencheEndereco("17402374", "340", "Teste Complemento");
-            CadastroSteps.PreencheMetodoEntrega();
-            CadastroSteps.FinalizaCadastroEntrega();
+            CadastroSteps.SetPreencheDados();
+            CadastroSteps.SetPreencheEndereco("01001000", "1004", "lado ímpar");
+            CadastroSteps.SetPreencheMetodoEntrega();
+            CadastroSteps.ClickFinalizaCadastroEntrega();
          }
     }
 }
