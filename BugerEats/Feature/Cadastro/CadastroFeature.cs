@@ -43,7 +43,7 @@ namespace BugerEats.Feature.Cadastro
             Console.WriteLine("Então: O sistema deverá validar os dados do usuário e exibir mensagem de erro abaixo do campo @CPF");
 
             HomeSteps.ClickCadastro();
-            CadastroSteps.SetPreecherCpf();
+            CadastroSteps.SetPreecherCpfInvalido();
             CadastroSteps.ClickFinalizaCadastroEntrega();
             CadastroSteps.CheckCpfInvalido();
         }

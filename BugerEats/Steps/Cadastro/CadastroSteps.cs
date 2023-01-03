@@ -76,14 +76,13 @@ namespace BugerEats.Steps.Cadastro
             Driver.FindElement(CadastroPage.Cep).SendKeys(cep.ToString());
         }
 
-        public static void SetPreecherCpf()
+        public static void SetPreecherCpfInvalido()
         {
             var pessoa = FakeDadosPessoa.ListaPessoasFake();
 
             foreach (var pes in pessoa)
             {
                 Driver.FindElement(CadastroPage.Cpf).SendKeys(pes.Cpf);
-                Console.WriteLine(pes.Cpf);
             }
         }
 
