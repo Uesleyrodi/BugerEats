@@ -1,6 +1,4 @@
-﻿using Bogus;
-using Bogus.Extensions.Brazil;
-using BugerEats.Deploy;
+﻿using BugerEats.Deploy;
 using BugerEats.PageObjects.Cadastro;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -86,7 +84,7 @@ namespace BugerEats.Steps.Cadastro
             }
         }
 
-        public static void PreencheDados()
+        public static void SetPreencheDados()
         {
             var pessoa = FakeDadosPessoa.ListaPessoasFake();
 
@@ -101,15 +99,16 @@ namespace BugerEats.Steps.Cadastro
             }
         }
 
-        public static void PreencheEndereco(string cep, string numero, string complemento)
+        public static void SetPreencheEndereco(string cep, string numero, string complemento)
         {
+
             Driver.FindElement(CadastroPage.Cep).SendKeys(cep);
             ClickBuscaCep();
             Driver.FindElement(CadastroPage.Numero).SendKeys(numero);
             Driver.FindElement(CadastroPage.Complemento).SendKeys(complemento);
         }
 
-        public static void PreencheMetodoEntrega()
+        public static void SetPreencheMetodoEntrega()
         {
             Driver.FindElement(CadastroPage.Moto).Click();
 

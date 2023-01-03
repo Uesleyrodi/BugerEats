@@ -16,7 +16,6 @@ namespace BugerEats.Feature.Home
             Console.WriteLine("Então: Deve ser direcionado a Home da aplicação");
 
             HomeSteps.CheckElementosHome();
-            //CadastroSteps.SetGerarDados();
         }
     }
 }

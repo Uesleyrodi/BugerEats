@@ -57,7 +57,7 @@ namespace BugerEats.Feature.Cadastro
             Console.WriteLine("Então: O sistema deve validar as informações e exibir mensagem de erro abaixo do campo @WhatsApp");
 
             HomeSteps.ClickCadastro();
-            CadastroSteps.PreencheDados();
+            CadastroSteps.SetPreencheDados();
             CadastroSteps.ClickFinalizaCadastroEntrega();
             CadastroSteps.CheckWhatsAppInvalido();
         }
@@ -84,9 +84,9 @@ namespace BugerEats.Feature.Cadastro
             Console.WriteLine("Então: O sistema informará ao usuário os dados da Busca, preenchendo os campos @Logradouro, @Bairro, @Cidade");
             
             HomeSteps.ClickCadastro();
-            CadastroSteps.SetPreencherCep("17402374");
+            CadastroSteps.SetPreencherCep("01001000");
             CadastroSteps.ClickBuscaCep();
-            CadastroSteps.CheckBuscaCep("Rua da Aroeira", "Jardim Paineiras", "Garça/SP");
+            CadastroSteps.CheckBuscaCep("Praça da Sé", "Sé", "São Paulo/SP");
         }
 
         [TestMethod]
@@ -99,9 +99,9 @@ namespace BugerEats.Feature.Cadastro
             Console.WriteLine("E: E o sistema deve redirecionar a '/Home'");
 
             HomeSteps.ClickCadastro();
-            CadastroSteps.PreencheDados();
-            CadastroSteps.PreencheEndereco("17402374", "340", "Teste Complemento");
-            CadastroSteps.PreencheMetodoEntrega();
+            CadastroSteps.SetPreencheDados();
+            CadastroSteps.SetPreencheEndereco("01001000", "1004", "lado ímpar");
+            CadastroSteps.SetPreencheMetodoEntrega();
             CadastroSteps.ClickFinalizaCadastroEntrega();
          }
     }

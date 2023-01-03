@@ -60,8 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deploy\DadosRandomicos\FakeDadosPessoa.cs" />
-    <Compile Include="Deploy\DadosRandomicos\Pessoa.cs" />
+    <Compile Include="Deploy\DadosRandomicos\Dados\FakeDadosPessoa.cs" />
+    <Compile Include="Deploy\DadosRandomicos\Dados\Pessoa.cs" />
     <Compile Include="Feature\Cadastro\CadastroFeature.cs" />
     <Compile Include="Feature\Home\HomeFeature.cs" />
     <Compile Include="Hooks.cs" />
